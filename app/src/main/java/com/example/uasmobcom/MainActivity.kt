@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
             val stringRequest = StringRequest(Request.Method.GET, url,
                 { response ->
-                    pSourceTv.text = response.toString()
+                    pSourceTv.text = response.toString().replace("\n","")
                 },
                 { pSourceTv.text = "Either fetching data or error" }
             )
